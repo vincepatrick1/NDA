@@ -1,0 +1,330 @@
+﻿@model NDASite.Models.TeamViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="containter team-container">
+    <div class="col-md-12 footer-bg">
+        <h1 class="team-header">MEET THE TEAM</h1>
+    </div>
+    <div class="col-md-12 team-bg">
+        <div class="row">
+            @foreach (var director in Model.TeamBios.Take(3))
+            {
+                <div class="col-md-4">
+                    <center>
+                        <img class="footer-margin team-img" src=@Href(director.ImageUrl) />
+                        <h3 class="" style="font-weight:bold" id="title">@director.Title<br />@director.Name </h3>
+                        <h4 class="" id="name">
+                            Contact: @director.Phone <br />
+                            Email:<a href=@director.Email target="_blank">@director.Email</a>
+                        </h4>
+                        <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
+                    </center>
+                 </div>
+
+                <div id="@(director.Id)" class="modal fade" data-backdrop="static" data- keyboard="false">
+                    <div class="modal-dialog ">
+                        
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">@director.Title</h4>
+                                </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <img class="team-img" src=@Href(director.ImageUrl) />
+                                            </div>
+                                             <div class="col-md-7">
+                                                        <p>@director.Description</p>
+                                             </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <h4 class="" style="font-weight:bold" id="title">
+                                                    @director.Name<br />Contact: @director.Phone <br />
+                                                    Email:<a href=@director.Email target="_blank">@director.Email</a>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                </div>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+
+            }
+            </div>
+        <div class="row">
+            @foreach (var director in Model.TeamBios.Skip(3))
+            {
+                <div class="col-md-4">
+                    <center>
+                        <img class="footer-margin team-img" src=@Href(director.ImageUrl) />
+                        <h3 class="" style="font-weight:bold" id="title">@director.Title<br />@director.Name </h3>
+                        <h4 class="" id="name">
+                            @if (director.Email != null) {
+                                @:Contact: @director.Phone <br />
+                                @:Email:<a href=@director.Email target="_blank">@director.Email</a>
+                            }
+                        </h4>
+                        <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
+                    </center>
+                </div>
+
+                <div id="@(director.Id)" class="modal fade" data-backdrop="static" data- keyboard="false">
+                    <div class="modal-dialog ">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">@director.Title</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <img class="team-img" src=@Href(director.ImageUrl) />
+                                    </div>
+                                    <div class="col-md-7">
+                                        <p>@director.Description</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <h4 class="" style="font-weight:bold" id="title">
+                                            @director.Name<br />
+                                            
+                                            @if (director.Email != null)
+                                            {
+                                                @:Contact: @director.Phone <br />
+                                                @:Email:<a href=@director.Email target="_blank">@director.Email</a>
+                                           }
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+
+     </div>   
+</div>
+@*<script>
+    function showBio() {
+        var x = document.getElementById("bio");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>*@
+
+@*<container>
+    <h1 class="common-Uppercase team-header">Meet the Team</h1>
+</container>
+<div class="office">
+    <h1 class="small-padding city-font">Straight Forward Merger and Acquistion Results</h1>
+</div>
+    <div class= "team-bg">
+        <div class="col-md-3">
+            <center>
+                <img class="team team-pic" src="~/Content/nick.jpg" />
+                <h3 class="team-name"> Nick Diachenko <br />President</h3>
+            </center>
+        </div>
+        <div class="col-md-9">
+            <p class="team-description">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+
+                Contact: (502) 495-2345
+                Email: nickd@ndainc.net
+            </p>
+        </div>
+    </div>
+
+    <div class="team-alt-bg">
+        <div class="col-md-3">
+            <center>
+                <img class="team team-pic" src="~/Content/john.jpg" />
+                <h3 class="team-name"> Nick Diachenko <br />President</h3>
+            </center>
+        </div>
+        <div class="col-md-9">
+            <p class="team-description">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+
+                Contact: (502) 495-2345
+                Email: nickd@ndainc.net
+            </p>
+        </div>
+    </div>
+
+
+    <div class="team-bg">
+        <div class="col-md-3">
+            <center>
+                <img class="team team-pic" src="~/Content/derek.jpg" />
+                <h3 class="team-name"> Nick Diachenko <br />President</h3>
+            </center>
+        </div>
+        <div class="col-md-9">
+            <p class="team-description">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+
+                Contact: (502) 495-2345
+                Email: nickd@ndainc.net
+            </p>
+        </div>
+    </div>
+    <div class="team-alt-bg">
+        <div class="col-md-3">
+            <center>
+                <img class="team team-pic" src="~/Content/byron.jpg" />
+                <h3 class="team-name"> Nick Diachenko <br />President</h3>
+            </center>
+        </div>
+        <div class="col-md-9">
+            <h3 class="team-description">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+
+                Contact: (502) 495-2345
+                Email: nickd@ndainc.net
+            </h3>
+        </div>
+    </div>
+    <div class="team-bg">
+        <div class="col-md-3">
+            <center>
+                <img class="team team-pic" src="~/Content/mitch.jpeg" />
+                <h3 class="team-name"> Nick Diachenko <br />President</h3>
+            </center>
+        </div>
+        <div class="col-md-9">
+            <h4 class="team-description">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+
+                Contact: (502) 495-2345
+                Email: nickd@ndainc.net
+            </h4>
+        </div>
+    </div>*@
+
+
+
+
+@*<div class="col-md-4">
+        <center>
+            <img class="footer-margin team-img" src="~/Content/nick.jpg" />
+            <h3 class="" style="font-weight:bold" id="title">President<br />Nick Diachenko </h3>
+            <h4 class="" id="name">
+                Contact: (502) 495-2345 <br />
+                Email:<a href="nickd@ndainc.net" target="_blank">nickd@ndainc.net</a>
+            </h4>
+              <button class="common-Button" data-toggle="modal" data-target="#myModal">Show Bio</button>
+        </center>
+        <div id="myModal" class="modal fade" data-backdrop="static" data- keyboard="false">
+            <div class="modal-dialog ">
+                <div class="modal-dialog">
+
+                     Modal content
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Nick</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                        </div>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <center>
+                <img class="footer-margin team-img" src="~/Content/john.jpg" />
+                <h3 class="" style="font-weight:bold" id="title">President<br />Nick Diachenko </h3>
+                <h4 class="" id="name">
+                    Contact: (502) 495-2345 <br />
+                    Email:<a href="nickd@ndainc.net" target="_blank">nickd@ndainc.net</a>
+                </h4>
+                <div class="common-Button" onclick="showBio()">Show Bio</div>
+            </center>
+            <p id="bio">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. <br />In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+        </div>
+        <div class="col-md-4">
+            <center>
+                <img class="footer-margin team-img" src="~/Content/derek.jpg" />
+                <h3 class="" style="font-weight:bold" id="title">President<br />Nick Diachenko </h3>
+                <h4 class="" id="name">
+                    Contact: (502) 495-2345 <br />
+                    Email:<a href="nickd@ndainc.net" target="_blank">nickd@ndainc.net</a>
+                </h4>
+                <div class="common-Button" onclick="showBio()">Show Bio</div>
+            </center>
+            <p id="bio">
+                As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. <br />In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+        </div>
+    </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <center>
+                        <img class="footer-margin team-img" src="~/Content/byron.jpg" />
+                        <h3 class="" style="font-weight:bold" id="title">President<br />Nick Diachenko </h3>
+                        <h4 class="" id="name">
+                            Contact: (502) 495-2345 <br />
+                            Email:<a href="nickd@ndainc.net" target="_blank">nickd@ndainc.net</a>
+                        </h4>
+                        <div class="common-Button" onclick="showBio()">Show Bio</div>
+                    </center>
+                    <p id="bio">
+                        As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. <br />In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                        It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+                </div>
+                <div class="col-md-4">
+                    <center>
+                        <img class="footer-margin team-img" src="~/Content/mitch.jpeg" />
+                        <h3 class="" style="font-weight:bold" id="title">President<br />Nick Diachenko </h3>
+                        <h4 class="" id="name">
+                            Contact: (502) 495-2345 <br />
+                            Email:<a href="nickd@ndainc.net" target="_blank">nickd@ndainc.net</a>
+                        </h4>
+                        <div class="common-Button" onclick="showBio()">Show Bio</div>
+                    </center>
+                    <p id="bio">
+                        As co-founder of NDA, Inc., Nick Diachenko continues to lead the organization and the franchisee clients through successful brokerage services. As an outgrowth of their work with franchisees at KFC, in 1988, Nick and Charlie Nash launched NDA. Nick began working with franchisees in 1976 for Convenient Industries of America and two years later was chosen to run an in-house SBA-Licensed Small business Investment Company (SBIC) before being promoted to run the Franchising Department for Convenient Industries of America. <br />In 1984, Nick joined KFC Corporation as Director of Franchise Development.
+
+                        It was in this position that he grew a deep knowledge of the franchise process both on the acquisition and the selling side. As a graduate from Hanover College, Nick continued his education earning his MBA from the University of Louisville. Today, Nick serves NDA, Inc. clients with his invaluable 40 years of experience in business development and investment.
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>*@

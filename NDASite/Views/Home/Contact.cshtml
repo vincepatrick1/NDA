@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<center><h2 class="common-Uppercase">Let's Start a Conversation</h2></center>
+<div class="container intro">
+     <div class="col-md-12">
+        <div class="col-md-12">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquet finibus ex, nec tempor metus porttitor in. Ut nec sollicitudin augue. Nam ipsum dolor, elementum vitae rutrum in, semper nec lorem. Donec tincidunt ipsum a ligula sodales dapibus. Cras vel quam diam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse lacus magna, sollicitudin vitae dolor eu, aliquam tempus ex.
+                Praesent euismod sit amet libero ut scelerisque.
+                Duis ullamcorper urna eget nisi auctor, ut eleifend lacus ultrices.
+            </p>
+                <form class="col-md-6" action="mailto:vincethaprince3@gmail.com" method="POST" enctype="text/plain">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user blue"></i></span>
+                                <input style="width: 100%" type="text" name="Name" placeholder="Name" class="form-control" autofocus="autofocus" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope blue"></i></span>
+                                <input style="width: 100%" type="email" name="Email" placeholder="Email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone blue"></i></span>
+                                <input style="width: 100%" type="number" name="Phone" placeholder="Phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-comment blue"></i></span>
+                                <textarea style="width: 100%" name="Message" rows="6" class="form-control" type="text" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-info">Send <span class="glyphicon glyphicon-send"></span></button>
+                            <button type="reset" value="Reset" name="reset" class="btn">Reset <span class="glyphicon glyphicon-refresh"></span></button>
+                        </div>
+                    </div>
+                </form>
+            <div class="col-md-6">
+              <div id="map"></div>
+            </div>
+        </div>
+     </div>
+</div>
+@section Scripts
+{ 
+<script type="text/javascript">
+// Initialize and add the map
+function initMap() {
+  // The location of nda
+    var nda = { lat: 38.176693, lng: -85.619342 }; 
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 14, center: nda});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: nda, map: map});
+}
+$('#map').click(function () {
+    window.open('https://www.google.com/maps/dir//4906+Bardstown+Road,+Louisville,+KY/');
+});
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAYfvLDr1YhEKvDhGTwdj75IgmOmP5KPWQ&callback=initMap">
+</script>
+    }

@@ -1,0 +1,305 @@
+﻿body {
+    padding-top: 75px;
+    padding-bottom: 0px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.footer-bg {
+   background-color: #1c2e37;
+   overflow: auto;
+   color:#dedfe5;
+}
+.team-container{
+    margin:30px;
+}
+.navbar-inverse{
+    background-color:#1c2e37;
+    color:#dedfe5;
+}
+.body-bg{
+    background-color:#dee0e5;
+    overflow:auto;
+}
+.md-text, .lg-text, .sm-text{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  line-height: 1.1;
+}
+.md-text{
+    font-size:18px;
+}
+.btm-padding{
+    padding-bottom: 25px;
+}
+.city-font{
+    color: ghostwhite;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+}
+.some-margin{
+    margin-left:25px;
+    margin-right:25px;
+}
+.footer-margin{
+    margin-top:15px;
+}
+.intro{
+    background-color:rgba(245, 245, 245,0.89);
+    overflow:auto;
+    border-radius: 25px;
+    border: 2px solid #dee0e5;
+}
+.lg-margin{
+    margin-left:20px;
+    margin-right:20px;
+}
+.intro-margin{
+    margin-right:15px;
+}
+.small-padding{
+    padding-bottom:15px;
+}
+.header-font{
+    font-family:Arial;
+}
+.common-Uppercase {
+    color: #072419;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+}
+.med-text{
+     color: #072419;
+    font-weight: 600;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+}
+.carousel{
+    max-height: 700px;
+ box-shadow: 0px 8px 20px 0px;
+}
+
+.slider img {
+  width: auto;
+  height: 225px;
+  max-height: 225px;
+}
+.carousel-multi{
+    
+     box-shadow: 0px 8px 20px 0px;
+     padding-bottom:30px;
+}
+.cols {
+    display: flex;
+    border-radius: 25px;
+    border: 2px solid #dee0e5;
+}
+#ourservices {
+    border-width: 0 8px 0 0;
+    border: 10px solid #f6f9fc;
+}
+.no-scroll{
+    overflow-x:hidden;
+
+}
+
+#ourteam{
+    border-width: 0 0 0 8px;
+    border: 10px solid #f6f9fc;
+}
+.vl {
+    border-left: 6px grey;
+    height: 500px;
+}
+.common-Button {
+    white-space: nowrap;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .15s ease;
+}
+
+    .common-Button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        text-decoration: none;
+        letter-spacing: .10em;
+    }
+    .values{
+        margin-top:50px;
+        background-size: cover;
+        height:400px;
+        width:100%;
+        background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),
+                     url('../Content/lou1.jpg')
+
+
+    }
+    #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+.team{
+    width:auto;
+    height:100%;
+    border-radius:90%;
+}
+
+
+#fade h3{
+    opacity: 0;
+    font-size: 21px;
+    margin-top: 25px;
+    text-align: center;
+
+    -webkit-transition: opacity 2s ease-in;
+       -moz-transition: opacity 2s ease-in;
+         -o-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+}
+
+    #fade h3.load {
+        opacity: 1;
+    }
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+    font-size:40px;
+    text-align: center;
+    margin-bottom:15px;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.slider-bg{
+    background-color:white
+}
+
+.team-bg{
+    background-color:rgba(245, 245, 245,0.89);
+    overflow:auto;
+}
+.team-alt-bg{
+    background-color:#34607f;
+    overflow:auto;
+    color:white;
+}
+.team-pic{
+    margin-bottom:20px;
+    margin-top:30px;
+    margin-left:20px;
+}
+.team-description{
+    margin-top:50px;
+    margin-right:30px;
+}
+.team-name{
+
+    margin-bottom:20px;
+    margin-left: 30px;
+
+}
+.team-header{
+    margin-left: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.office{
+        margin-top:50px;
+        background-size: cover;
+        height:400px;
+        width:100%;
+        background: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)),
+                     url('../Content/office.JPG')
+
+
+    }
+.header-margin{
+    margin-top:30px;
+}
+.city-margin{
+    padding-top:100px;
+}
+.service-list{
+    list-style:none;
+    color:white;
+}
+.carousel-caption {
+    background: rgba(0,0,0,0.3);
+    right: 0;
+    left: 0;
+    position: absolute;
+    padding-bottom:25px;
+    font-family: Camphor;
+    font-weight: 200;
+}
+.hidden { 
+    display: none; 
+}
+.unhidden { 
+    display: block;
+}
+.team-img{
+    border-radius: 25px;
+    border: 2px solid #dee0e5;
+    box-shadow: 0px 8px 20px 0px;
+}
+.nda-logo{
+    height:55px;
+    margin-top:10px;
+    margin-right:15px;
+    border-radius: 5px;
+}
+.nav-header{
+    font-size:18px;
+    margin-top:10px;
+}
