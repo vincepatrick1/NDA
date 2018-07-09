@@ -4,10 +4,11 @@
 }
 
 <div class="containter team-container">
-    <div class="col-md-12 footer-bg">
+
+    <div class="col-md-12 footer-bg border-top ">
         <h1 class="team-header">MEET THE TEAM</h1>
     </div>
-    <div class="col-md-12 team-bg">
+    <div class="col-md-12 team-bg border-btm">
         <div class="row">
             @foreach (var director in Model.TeamBios.Take(3))
             {
@@ -18,8 +19,12 @@
                         <h4 class="" id="name">
                             Contact: @director.Phone <br />
                             Email:<a href=@director.Email target="_blank">@director.Email</a>
+
+                            <br />
+                            <a href="www.linkedin.com" class="fa fa-linkedin" style="font-size:24px ; margin-left:10px; margin-top:2px;"></a>
                         </h4>
-                        <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
+                            <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
+                        
                     </center>
                  </div>
 
@@ -57,7 +62,7 @@
 
             }
             </div>
-        <div class="row">
+        <div class="row team-row">
             @foreach (var director in Model.TeamBios.Skip(3))
             {
                 <div class="col-md-4">
@@ -65,12 +70,17 @@
                         <img class="footer-margin team-img" src=@Href(director.ImageUrl) />
                         <h3 class="" style="font-weight:bold" id="title">@director.Title<br />@director.Name </h3>
                         <h4 class="" id="name">
-                            @if (director.Email != null) {
+                            @if (director.Email != null)
+                            {
                                 @:Contact: @director.Phone <br />
                                 @:Email:<a href=@director.Email target="_blank">@director.Email</a>
+                                <br />
                             }
+
+                        
+                            <a href="www.linkedin.com" class="fa fa-linkedin" style="font-size:24px ; margin-left:10px; margin-top:2px;"></a>
                         </h4>
-                        <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
+                            <div class="common-Button" data-toggle="modal" data-target="#@(director.Id)">Show Bio</div>
                     </center>
                 </div>
 

@@ -11,13 +11,22 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav nav-header">
-                <li>@Html.ActionLink("SERVICES", "About", "Home")</li>
+                <li>@Html.ActionLink("SERVICES", "Index", "Services")</li>
                 <li>@Html.ActionLink("OUR TEAM", "Index", "Team")</li>
+                <li>@Html.ActionLink("HISTORY", "About", "Home")</li>
                 <li>@Html.ActionLink("CONTACT", "Contact", "Home")</li>
-                <li>@Html.ActionLink("TESTIMONIALS", "Contact", "Home")</li>
-                <li>@Html.ActionLink("VIDEOS", "Contact", "Home")</li>
+                <li>@Html.ActionLink("TESTIMONIALS", "Index", "Testimonial")</li>
+                <li>@Html.ActionLink("VIDEOS", "Index", "Video")</li>
                 
             </ul>
+            <div class="nav navbar-right icon-list">
+                <a href="www.linkedin.com" class="fa fa-linkedin" style="font-size:24px;color:#dedfe5"></a>
+                <a href="www.linkedin.com" class="fa fa-youtube-play" style="font-size:24px ; color:#dedfe5; margin-left:10px; margin-top:2px;"></a>
+            </div>
+            <ul class="nav navbar-right icon-list">
+                
+            </ul>
+
         </div>
     </div>
 </div>

@@ -199,7 +199,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NavController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\TestimonialController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -216,6 +219,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\burgerking.jpg" />
     <Content Include="Content\byron.jpg" />
+    <Content Include="Content\Contract.jpg" />
     <Content Include="Content\derek.jpg" />
     <Content Include="Content\john.jpg" />
     <Content Include="Content\kfc-logo.jpg" />
@@ -234,6 +238,7 @@
     <Content Include="Content\office.JPG" />
     <Content Include="Content\pizza hut.jpg" />
     <Content Include="Content\popeyes.jpg" />
+    <Content Include="Content\racing.jpg" />
     <Content Include="Content\Sonic-Logo-200.jpg" />
     <Content Include="Content\taco-bell-200.jpg" />
     <Content Include="Content\the office.JPG" />
@@ -300,6 +305,9 @@
     <Content Include="Views\Nav\Footer.cshtml" />
     <Content Include="Views\Home\MultiSlide.cshtml" />
     <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

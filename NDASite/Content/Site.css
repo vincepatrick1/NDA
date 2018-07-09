@@ -29,14 +29,14 @@ textarea {
    color:#dedfe5;
 }
 .team-container{
-    margin:30px;
+    margin:45px;
 }
 .navbar-inverse{
     background-color:#1c2e37;
     color:#dedfe5;
 }
 .body-bg{
-    background-color:#dee0e5;
+    background-color:#608fbc;
     overflow:auto;
 }
 .md-text, .lg-text, .sm-text{
@@ -53,7 +53,7 @@ textarea {
 .city-font{
     color: ghostwhite;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 40px;
     text-transform: uppercase;
     letter-spacing: .025em;
     font-family: Camphor,Open Sans,Segoe UI,sans-serif;
@@ -87,17 +87,18 @@ textarea {
 .common-Uppercase {
     color: #072419;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 35px;
+    line-height:40px;
     text-transform: uppercase;
-    letter-spacing: .025em;
+    letter-spacing: .035em;
     font-family: Camphor,Open Sans,Segoe UI,sans-serif;
 }
 .med-text{
      color: #072419;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 30px;
     text-transform: uppercase;
-    letter-spacing: .025em;
+    letter-spacing: .035em;
     font-family: Camphor,Open Sans,Segoe UI,sans-serif;
 }
 .carousel{
@@ -167,7 +168,7 @@ textarea {
                      rgba(20,20,20, .5), 
                      rgba(20,20,20, .5)),
                      url('../Content/lou1.jpg')
-
+       
 
     }
     #map {
@@ -225,6 +226,16 @@ textarea {
 .team-bg{
     background-color:rgba(245, 245, 245,0.89);
     overflow:auto;
+
+}
+.border-top{
+    border-top-right-radius: 25px;
+    border-top-left-radius:25px;
+    border: 2px solid #dee0e5;
+}
+.border-btm{
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
 }
 .team-alt-bg{
     background-color:#34607f;
@@ -267,11 +278,12 @@ textarea {
     margin-top:30px;
 }
 .city-margin{
-    padding-top:100px;
+    padding-top:75px;
 }
 .service-list{
     list-style:none;
     color:white;
+    padding:0px;
 }
 .carousel-caption {
     background: rgba(0,0,0,0.3);
@@ -302,4 +314,116 @@ textarea {
 .nav-header{
     font-size:18px;
     margin-top:10px;
+}
+.race{
+    margin-top: 50px;
+    background-size: cover;
+    width: 100%;
+    height:400px;
+background-position: center center;
+text-align:center;
+margin:auto;
+padding:0;
+    background: linear-gradient( rgba(20,20,20, .5), rgba(20,20,20, .5)), url('../Content/racing.jpg');
+}
+.top-bg{
+    background-size:cover;
+}
+.icon-list li{
+    display: inline;
+    float: left;
+}
+.test{
+   
+    margin-bottom:50px;
+}
+.row-width{
+    width:100%;
+}
+.team-row{
+    margin-bottom:20px;
+}
+.test-top{
+    margin-top: 40px;
+}
+.test-border{
+    border-radius: 25px;
+}
+.service-image{
+    border-radius: 4px;
+    box-shadow:3px 6px 20px;
+    height:350px;
+    
+}
+.service-heading {
+    font-size: 50px;
+    letter-spacing: -.05rem;
+    line-height: 1;
+    color: #072419;
+}
+.body-txt {
+    font-size: 16px;
+    line-height: 26px;
+    color: black;
+}
+.service-txt{
+    font-size: 26px;
+    line-height: 36px;
+    color: darkslategray;
+}
+.service-intro{
+    padding-bottom:25px;
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:10px;
+}
+
+
+.lg-body {
+    font-size: 30px;
+    line-height: 36px;
+    color: #1c2e37;
+}
+.service-title{
+    font-size: 45px;
+    
+    font-weight: 600;
+    line-height:55px;
+    text-transform: uppercase;
+    letter-spacing: .035em;
+    font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+     margin-left: 20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.history-intro{
+    padding-bottom:25px;
+    padding-left:25px;
+    padding-right:25px;
+}
+.history-spacing{
+    padding-top:40px;
+}
+.contact-image {
+    border-radius: 4px;
+    box-shadow: 3px 6px 20px;
+    margin-top:15px;
+}
+.contact-txt{
+    padding-top:30px;
+
+}
+.client-test{
+    padding-top:25px;
+    padding-bottom:25px;
+}
+.quote{
+    font-style:italic;
+    font-size: 20px;
+}
+.home-height{
+    height:285px;
+}
+.home-margin{
+    margin-top:25px;
 }

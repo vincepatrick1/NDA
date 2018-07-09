@@ -4,15 +4,20 @@
                 <h4 class="footer-margin"><b> Quick Navigation </b></h4>
                 <div>
                     @Html.ActionLink("HOME", "Index", "Home") <br />
-                    @Html.ActionLink("SERVICES", "About", "Home") <br />
+                    @Html.ActionLink("SERVICES", "Index", "Services") <br />
                     @Html.ActionLink("TEAM", "Index", "Team") <br />
+                    @Html.ActionLink("HISTORY", "About", "Home")
                     @Html.ActionLink("CONTACT", "Contact", "Home") <br />
-                    @Html.ActionLink("TESTIMONIALS", "About", "Home") <br />
-                    @Html.ActionLink("VIDEOS", "About", "Home")
+                    @Html.ActionLink("TESTIMONIALS", "Index", "Video") <br />
+                    @Html.ActionLink("VIDEOS", "Index", "Video")
                 </div>
-
-                <p>&copy; @DateTime.Now.Year - NDA, INC.</p>
-            </div>
+                
+                <br />
+                <br />
+                <a href="www.linkedin.com" class="fa fa-linkedin" style="font-size:24px;color:#dedfe5"></a>
+                    <a href="www.linkedin.com" class="fa fa-youtube-play" style="font-size:24px ; color:#dedfe5; margin-left:10px; margin-top:2px;"></a>
+                    <p>&copy; @DateTime.Now.Year - NDA, INC.</p>
+</div>
         </div>
         <div class="col-md-4">
             <div class="some-margin">
